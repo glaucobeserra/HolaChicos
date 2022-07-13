@@ -16,11 +16,6 @@ final class MainTabBarController: UITabBarController {
         setUpViewControllers()
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
     private func setUpTabBar() {
         view.tintColor = .darkGray
         tabBar.isTranslucent = false
@@ -28,6 +23,6 @@ final class MainTabBarController: UITabBarController {
     }
     
     private func setUpViewControllers() {
-        
+        // intencionalmente n implementado
     }
 }

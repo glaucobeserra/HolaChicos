@@ -12,6 +12,8 @@ final class MainCoordinator: Coordinator {
     
     var parentCoordinator: Coordinator?
     var childCoordinators: [Coordinator] = []
+    
+    //
     var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
@@ -25,6 +27,7 @@ final class MainCoordinator: Coordinator {
     private func startTabBarController() {
         let viewController = MainTabBarController()
         viewController.viewControllers = [makeFirstTab(), makeSecondTab(), makeThirdTab()]
+        
         navigationController.setViewControllers([viewController], animated: true)
     }
     

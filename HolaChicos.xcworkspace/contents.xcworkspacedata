@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Helpers/Helpers.xcodeproj">
+      location = "group:HolaChicos/HolaChicos.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:HolaChicos/HolaChicos.xcodeproj">
+      location = "group:Helpers/Helpers.xcodeproj">
    </FileRef>
 </Workspace>
