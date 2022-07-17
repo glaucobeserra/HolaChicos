@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19190D16288325C40041E67D /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19190D15288325C40041E67D /* Components.swift */; };
 		19190D1828832ACB0041E67D /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19190D1728832ACA0041E67D /* UIView+Extensions.swift */; };
 		19483474287FF50600DFF40C /* OverlapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19483473287FF50600DFF40C /* OverlapViewController.swift */; };
 		19483476287FF51800DFF40C /* MoreOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19483475287FF51800DFF40C /* MoreOptionsViewController.swift */; };
@@ -58,7 +57,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		19190D15288325C40041E67D /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		19190D1728832ACA0041E67D /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		19483473287FF50600DFF40C /* OverlapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlapViewController.swift; sourceTree = "<group>"; };
 		19483475287FF51800DFF40C /* MoreOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreOptionsViewController.swift; sourceTree = "<group>"; };
@@ -222,18 +220,17 @@
 		19FB64C1287E5D61002370A2 /* HolaChicos */ = {
 			isa = PBXGroup;
 			children = (
+				19AE07A028839D55007BC9B4 /* ServiceAPI.swift */,
 				19AE079B28839C1C007BC9B4 /* Flows */,
 				19FB64F2287E5DC1002370A2 /* Helpers */,
 				19FB64F5287E5E28002370A2 /* MainFiles */,
 				19190D1928832AD70041E67D /* Extensions */,
+				19AE07A82883BCB1007BC9B4 /* ChicoComponents */,
 				19FB64D0287E5D65002370A2 /* Info.plist */,
 				19FB64CB287E5D65002370A2 /* Assets.xcassets */,
 				19FB64C2287E5D61002370A2 /* AppDelegate.swift */,
 				19FB64C4287E5D61002370A2 /* SceneDelegate.swift */,
 				19FB64CD287E5D65002370A2 /* LaunchScreen.storyboard */,
-				19190D15288325C40041E67D /* Components.swift */,
-				19AE07A82883BCB1007BC9B4 /* ChicoComponents */,
-				19AE07A028839D55007BC9B4 /* ServiceAPI.swift */,
 			);
 			path = HolaChicos;
 			sourceTree = "<group>";
@@ -429,7 +426,6 @@
 				19AE079528833A7B007BC9B4 /* UITableViewCell+Extensions.swift in Sources */,
 				19FB650A287E6E4A002370A2 /* GroupTwoViewController.swift in Sources */,
 				1948347E287FF72200DFF40C /* OverlapFlowCoordinator.swift in Sources */,
-				19190D16288325C40041E67D /* Components.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
