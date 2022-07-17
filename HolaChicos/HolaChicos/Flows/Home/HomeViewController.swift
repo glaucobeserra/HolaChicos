@@ -47,11 +47,8 @@ final class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel.fetchChicos { [weak self] response in
-            guard let self = self else { return }
-            guard let _ = response else { return }
-            self.tableView.reloadData()
-        }
+        viewModel.delegate = self
+        viewModel.fetchChicos()
     }
     
     // MARK: - Private methods
@@ -100,5 +97,11 @@ extension HomeViewController: UITableViewDelegate {
         homeCoordinator.goTo(.detail(selectedChico))
         
         tableView.deselectRow(at: indexPath, animated: false)
+    }
+}
+
+extension HomeViewController: HomeViewModelDelegate {
+    func didFetch(data: [Chico]) {
+        tableView.reloadData()
     }
 }

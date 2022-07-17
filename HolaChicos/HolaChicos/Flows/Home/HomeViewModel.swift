@@ -9,36 +9,39 @@
 import Foundation
 import UIKit
 
+protocol HomeViewModelDelegate: AnyObject {
+    func didFetch(data: [Chico])
+}
+
 final class HomeViewModel {
     
     // MARK: - Properties
+    
     var chicos: [Chico] = []
     var isLoading: ((Bool) -> Void)?
     
-    private let service: ServiceAPI
+    private let service: ServiceAPIProtocol
     
+    weak var delegate: HomeViewModelDelegate?
     
     // MARK: - Initialization
-    init(service: ServiceAPI) {
+    init(service: ServiceAPIProtocol) {
         self.service = service
     }
     
     // MARK: - Public methods
-    func fetchChicos(_ completion: @escaping (([Chico]?) -> Void)) {
+    func fetchChicos() {
         isLoading?(true)
-        var dummyResponse: [Chico] = []
         
-        for i in 1...15 {
-            dummyResponse.append(Chico(name: "Chico \(i)", description: "Description of Chico #\(i)", backgroundColor: UIColor.random))
-        }
-        
-        // Simulando o tempo de resposta da API
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+        service.fetchChicos { [weak self] response in
+            guard let self = self else { return }
             self.isLoading?(false)
-            self.chicos = dummyResponse
             
-            completion(dummyResponse)
-        })
+            guard let chicos = response, !chicos.isEmpty else { return }
+            
+            self.chicos = chicos
+            self.delegate?.didFetch(data: chicos)
+        }
     }
     
     func getChico(at indexPath: IndexPath) -> Chico {
