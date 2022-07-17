@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Chico {
+struct Chico: Equatable {
     let name: String
     let description: String
     var imageName: String = String()
