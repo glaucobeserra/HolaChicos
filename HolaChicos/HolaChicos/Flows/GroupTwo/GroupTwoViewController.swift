@@ -1,5 +1,5 @@
 //
-//  GroupOneViewController.swift
+//  GroupTwoViewController.swift
 //  HolaChicos
 //
 //  Created by Glauco Dantas Beserra on 13/07/22.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class GroupOneViewController: BaseViewController {
+final class GroupTwoViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .green
+        view.backgroundColor = .red
     }
 }

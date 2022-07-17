@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19190D16288325C40041E67D /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19190D15288325C40041E67D /* Components.swift */; };
+		19190D1828832ACB0041E67D /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19190D1728832ACA0041E67D /* UIView+Extensions.swift */; };
+		19483474287FF50600DFF40C /* OverlapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19483473287FF50600DFF40C /* OverlapViewController.swift */; };
+		19483476287FF51800DFF40C /* MoreOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19483475287FF51800DFF40C /* MoreOptionsViewController.swift */; };
+		19483478287FF6F100DFF40C /* HomeFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19483477287FF6F100DFF40C /* HomeFlowCoordinator.swift */; };
+		1948347A287FF70700DFF40C /* GroupOneFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19483479287FF70700DFF40C /* GroupOneFlowCoordinator.swift */; };
+		1948347C287FF71400DFF40C /* GroupTwoFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1948347B287FF71400DFF40C /* GroupTwoFlowCoordinator.swift */; };
+		1948347E287FF72200DFF40C /* OverlapFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1948347D287FF72200DFF40C /* OverlapFlowCoordinator.swift */; };
+		19AE078F2883377B007BC9B4 /* ChicoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE078E2883377B007BC9B4 /* ChicoTableViewCell.swift */; };
+		19AE079128833789007BC9B4 /* Chico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE079028833789007BC9B4 /* Chico.swift */; };
+		19AE07932883381A007BC9B4 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE07922883381A007BC9B4 /* UIColor+Extension.swift */; };
+		19AE079528833A7B007BC9B4 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE079428833A7B007BC9B4 /* UITableViewCell+Extensions.swift */; };
+		19AE07972883413D007BC9B4 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE07962883413D007BC9B4 /* UITableView+Extensions.swift */; };
+		19AE079928839BB8007BC9B4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE079828839BB7007BC9B4 /* HomeViewModel.swift */; };
+		19AE07A128839D55007BC9B4 /* ServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE07A028839D55007BC9B4 /* ServiceAPI.swift */; };
+		19AE07A52883B5ED007BC9B4 /* ChicoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE07A42883B5ED007BC9B4 /* ChicoDetailViewController.swift */; };
+		19AE07A72883B638007BC9B4 /* ChicoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE07A62883B638007BC9B4 /* ChicoDetailViewModel.swift */; };
 		19FB64C3287E5D61002370A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FB64C2287E5D61002370A2 /* AppDelegate.swift */; };
 		19FB64C5287E5D61002370A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FB64C4287E5D61002370A2 /* SceneDelegate.swift */; };
 		19FB64CC287E5D65002370A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19FB64CB287E5D65002370A2 /* Assets.xcassets */; };
@@ -41,6 +58,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19190D15288325C40041E67D /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		19190D1728832ACA0041E67D /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		19483473287FF50600DFF40C /* OverlapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlapViewController.swift; sourceTree = "<group>"; };
+		19483475287FF51800DFF40C /* MoreOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreOptionsViewController.swift; sourceTree = "<group>"; };
+		19483477287FF6F100DFF40C /* HomeFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowCoordinator.swift; sourceTree = "<group>"; };
+		19483479287FF70700DFF40C /* GroupOneFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupOneFlowCoordinator.swift; sourceTree = "<group>"; };
+		1948347B287FF71400DFF40C /* GroupTwoFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTwoFlowCoordinator.swift; sourceTree = "<group>"; };
+		1948347D287FF72200DFF40C /* OverlapFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlapFlowCoordinator.swift; sourceTree = "<group>"; };
+		19AE078E2883377B007BC9B4 /* ChicoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChicoTableViewCell.swift; sourceTree = "<group>"; };
+		19AE079028833789007BC9B4 /* Chico.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chico.swift; sourceTree = "<group>"; };
+		19AE07922883381A007BC9B4 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		19AE079428833A7B007BC9B4 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
+		19AE07962883413D007BC9B4 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		19AE079828839BB7007BC9B4 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		19AE07A028839D55007BC9B4 /* ServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAPI.swift; sourceTree = "<group>"; };
+		19AE07A42883B5ED007BC9B4 /* ChicoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChicoDetailViewController.swift; sourceTree = "<group>"; };
+		19AE07A62883B638007BC9B4 /* ChicoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChicoDetailViewModel.swift; sourceTree = "<group>"; };
 		19FB64BF287E5D61002370A2 /* HolaChicos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HolaChicos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19FB64C2287E5D61002370A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19FB64C4287E5D61002370A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +120,85 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19190D1928832AD70041E67D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				19AE07922883381A007BC9B4 /* UIColor+Extension.swift */,
+				19190D1728832ACA0041E67D /* UIView+Extensions.swift */,
+				19AE07962883413D007BC9B4 /* UITableView+Extensions.swift */,
+				19AE079428833A7B007BC9B4 /* UITableViewCell+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		19AE079A28839BDB007BC9B4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				19AE079828839BB7007BC9B4 /* HomeViewModel.swift */,
+				19FB6503287E6CB4002370A2 /* HomeViewController.swift */,
+				19483477287FF6F100DFF40C /* HomeFlowCoordinator.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		19AE079B28839C1C007BC9B4 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				19AE079A28839BDB007BC9B4 /* Home */,
+				19AE079C28839C31007BC9B4 /* GroupOne */,
+				19AE079D28839C38007BC9B4 /* GroupTwo */,
+				19AE079E28839C44007BC9B4 /* Overlap */,
+				19AE079F28839C53007BC9B4 /* MoreOptions */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		19AE079C28839C31007BC9B4 /* GroupOne */ = {
+			isa = PBXGroup;
+			children = (
+				19FB6507287E6E3B002370A2 /* GroupOneViewController.swift */,
+				19483479287FF70700DFF40C /* GroupOneFlowCoordinator.swift */,
+			);
+			path = GroupOne;
+			sourceTree = "<group>";
+		};
+		19AE079D28839C38007BC9B4 /* GroupTwo */ = {
+			isa = PBXGroup;
+			children = (
+				19FB6509287E6E4A002370A2 /* GroupTwoViewController.swift */,
+				1948347B287FF71400DFF40C /* GroupTwoFlowCoordinator.swift */,
+			);
+			path = GroupTwo;
+			sourceTree = "<group>";
+		};
+		19AE079E28839C44007BC9B4 /* Overlap */ = {
+			isa = PBXGroup;
+			children = (
+				19483473287FF50600DFF40C /* OverlapViewController.swift */,
+				1948347D287FF72200DFF40C /* OverlapFlowCoordinator.swift */,
+			);
+			path = Overlap;
+			sourceTree = "<group>";
+		};
+		19AE079F28839C53007BC9B4 /* MoreOptions */ = {
+			isa = PBXGroup;
+			children = (
+				19483475287FF51800DFF40C /* MoreOptionsViewController.swift */,
+			);
+			path = MoreOptions;
+			sourceTree = "<group>";
+		};
+		19AE07A82883BCB1007BC9B4 /* ChicoComponents */ = {
+			isa = PBXGroup;
+			children = (
+				19AE079028833789007BC9B4 /* Chico.swift */,
+				19AE078E2883377B007BC9B4 /* ChicoTableViewCell.swift */,
+				19AE07A62883B638007BC9B4 /* ChicoDetailViewModel.swift */,
+				19AE07A42883B5ED007BC9B4 /* ChicoDetailViewController.swift */,
+			);
+			path = ChicoComponents;
+			sourceTree = "<group>";
+		};
 		19FB64B6287E5D61002370A2 = {
 			isa = PBXGroup;
 			children = (
@@ -109,14 +222,18 @@
 		19FB64C1287E5D61002370A2 /* HolaChicos */ = {
 			isa = PBXGroup;
 			children = (
+				19AE079B28839C1C007BC9B4 /* Flows */,
 				19FB64F2287E5DC1002370A2 /* Helpers */,
 				19FB64F5287E5E28002370A2 /* MainFiles */,
+				19190D1928832AD70041E67D /* Extensions */,
 				19FB64D0287E5D65002370A2 /* Info.plist */,
 				19FB64CB287E5D65002370A2 /* Assets.xcassets */,
 				19FB64C2287E5D61002370A2 /* AppDelegate.swift */,
 				19FB64C4287E5D61002370A2 /* SceneDelegate.swift */,
 				19FB64CD287E5D65002370A2 /* LaunchScreen.storyboard */,
-				19FB650B287E6FF9002370A2 /* ViewControllers */,
+				19190D15288325C40041E67D /* Components.swift */,
+				19AE07A82883BCB1007BC9B4 /* ChicoComponents */,
+				19AE07A028839D55007BC9B4 /* ServiceAPI.swift */,
 			);
 			path = HolaChicos;
 			sourceTree = "<group>";
@@ -154,16 +271,6 @@
 				19FB64F8287E5E91002370A2 /* MainTabBarController.swift */,
 			);
 			path = MainFiles;
-			sourceTree = "<group>";
-		};
-		19FB650B287E6FF9002370A2 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				19FB6503287E6CB4002370A2 /* HomeViewController.swift */,
-				19FB6507287E6E3B002370A2 /* GroupOneViewController.swift */,
-				19FB6509287E6E4A002370A2 /* GroupTwoViewController.swift */,
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,15 +404,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19AE07932883381A007BC9B4 /* UIColor+Extension.swift in Sources */,
+				19AE079128833789007BC9B4 /* Chico.swift in Sources */,
+				19AE078F2883377B007BC9B4 /* ChicoTableViewCell.swift in Sources */,
 				19FB64C3287E5D61002370A2 /* AppDelegate.swift in Sources */,
 				19FB64F7287E5E37002370A2 /* MainCoordinator.swift in Sources */,
 				19FB64F9287E5E91002370A2 /* MainTabBarController.swift in Sources */,
 				19FB64C5287E5D61002370A2 /* SceneDelegate.swift in Sources */,
+				19AE07A72883B638007BC9B4 /* ChicoDetailViewModel.swift in Sources */,
+				1948347A287FF70700DFF40C /* GroupOneFlowCoordinator.swift in Sources */,
+				19483474287FF50600DFF40C /* OverlapViewController.swift in Sources */,
+				19483478287FF6F100DFF40C /* HomeFlowCoordinator.swift in Sources */,
 				19FB6508287E6E3B002370A2 /* GroupOneViewController.swift in Sources */,
+				19AE07972883413D007BC9B4 /* UITableView+Extensions.swift in Sources */,
 				19FB6504287E6CB4002370A2 /* HomeViewController.swift in Sources */,
+				19AE07A52883B5ED007BC9B4 /* ChicoDetailViewController.swift in Sources */,
+				1948347C287FF71400DFF40C /* GroupTwoFlowCoordinator.swift in Sources */,
+				19483476287FF51800DFF40C /* MoreOptionsViewController.swift in Sources */,
+				19190D1828832ACB0041E67D /* UIView+Extensions.swift in Sources */,
 				19FB64FF287E65AB002370A2 /* BaseViewController.swift in Sources */,
 				19FB64F4287E5DD4002370A2 /* Coordinator.swift in Sources */,
+				19AE079928839BB8007BC9B4 /* HomeViewModel.swift in Sources */,
+				19AE07A128839D55007BC9B4 /* ServiceAPI.swift in Sources */,
+				19AE079528833A7B007BC9B4 /* UITableViewCell+Extensions.swift in Sources */,
 				19FB650A287E6E4A002370A2 /* GroupTwoViewController.swift in Sources */,
+				1948347E287FF72200DFF40C /* OverlapFlowCoordinator.swift in Sources */,
+				19190D16288325C40041E67D /* Components.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

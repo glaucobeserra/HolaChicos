@@ -26,19 +26,22 @@ final class MainCoordinator: Coordinator {
     
     private func startTabBarController() {
         let viewController = MainTabBarController()
-        viewController.viewControllers = [makeFirstTab(), makeSecondTab(), makeThirdTab()]
+        viewController.viewControllers = [makeFirstTab(), makeSecondTab(), makeThirdTab(), makeFourthTab(), makeFifthTab()]
         
+        navigationController.setNavigationBarHidden(true, animated: false)
         navigationController.setViewControllers([viewController], animated: true)
     }
     
     private func makeFirstTab() -> UIViewController {
-        let viewController = HomeViewController()
+        let navigationController = UINavigationController()
         
-        viewController.coordinator = self
-        viewController.tabBarItem.title = "Home"
-        viewController.tabBarItem.image = UIImage(systemName: "house")
-
-        return viewController
+        let homeFlowCoordinator = HomeFlowCoordinator(navigationController: navigationController)
+        homeFlowCoordinator.parentCoordinator = self
+        homeFlowCoordinator.start()
+        
+        childCoordinators.append(homeFlowCoordinator)
+        
+        return navigationController
     }
     
     private func makeSecondTab() -> UIViewController {
@@ -57,6 +60,26 @@ final class MainCoordinator: Coordinator {
         viewController.coordinator = self
         viewController.tabBarItem.title = "Grupo ②"
         viewController.tabBarItem.image = UIImage(systemName: "network")
+        
+        return viewController
+    }
+    
+    private func makeFourthTab() -> UIViewController {
+        let viewController = OverlapViewController()
+        
+        viewController.coordinator = self
+        viewController.tabBarItem.title = "Overlap"
+        viewController.tabBarItem.image = UIImage(systemName: "tray.2.fill")
+        
+        return viewController
+    }
+    
+    private func makeFifthTab() -> UIViewController {
+        let viewController = MoreOptionsViewController()
+        
+        viewController.coordinator = self
+        viewController.tabBarItem.title = "Mais"
+        viewController.tabBarItem.image = UIImage(systemName: "ellipsis.circle")
         
         return viewController
     }
