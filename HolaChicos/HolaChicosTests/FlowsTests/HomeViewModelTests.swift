@@ -17,9 +17,15 @@ final class HomeViewModelTests: XCTestCase {
         return HomeViewModel(service: serviceSpy)
     }()
     
+    func test_chicosProperty_shouldInitializeEmpty() {
+        XCTAssertEqual(sut.chicos, [])
+    }
+    
+    func test_fetchChicos_shouldNotCallServiceFetchChicos() {
+        XCTAssertFalse(serviceSpy.fetchChicosCalled)
+    }
+    
     func test_fetchChicos_shouldCallServiceFetchChicos() {
-        // Given
-        
         // When
         sut.fetchChicos()
         
@@ -28,13 +34,20 @@ final class HomeViewModelTests: XCTestCase {
     }
     
     func test_fetchChicos_shouldCallServiceFetchChicosOnce() {
-        // Given
-        
         // When
         sut.fetchChicos()
         
         // Then
         XCTAssertEqual(serviceSpy.fetchChicosCallCount, 1)
+    }
+    
+    func test_fetchChicos_shouldCallServiceFetchChicosThirteenTimes() {
+        // When
+        for _ in 1...13 {
+            sut.fetchChicos()
+        }
+        // Then
+        XCTAssertEqual(serviceSpy.fetchChicosCallCount, 13)
     }
     
     func test_fetchChicos_whenResultIsNil_shouldNotCallDelegate() {
@@ -59,8 +72,55 @@ final class HomeViewModelTests: XCTestCase {
         sut.fetchChicos()
         
         // Then
+        XCTAssertEqual(sut.chicos.count, 1)
         XCTAssertTrue(delegateSpy.didFetchDataCalled)
         XCTAssertEqual(delegateSpy.didFetchDataResponse?.first?.name, "Chico 13")
+    }
+    
+    func test_getChico_atFirstPosition() {
+        // Given
+        let chicoList = Chico.fixtureList()
+        let firstPosition = 1
+        let indexToTest = IndexPath(row: firstPosition, section: .zero)
+        sut.chicos = chicoList
+        
+        // When
+        let selectedChico = sut.getChico(at: indexToTest)
+        
+        // Then
+        XCTAssertNotNil(selectedChico)
+        XCTAssertEqual(selectedChico, chicoList[firstPosition])
+    }
+    
+    func test_getChico_atLastPosition() {
+        // Given
+        let chicoList = Chico.fixtureList()
+        let lastPosition = chicoList.count - 1
+        let indexToTest = IndexPath(row: lastPosition, section: .zero)
+        sut.chicos = chicoList
+        
+        // When
+        let selectedChico = sut.getChico(at: indexToTest)
+        
+        // Then
+        XCTAssertNotNil(selectedChico)
+        XCTAssertEqual(selectedChico, chicoList[lastPosition])
+    }
+    
+    func test_getChico_atRandomPosition() {
+        // Given
+        let chicoList = Chico.fixtureList()
+        let randomPosition = Int.random(in: 0..<chicoList.count)
+        let indexToTest = IndexPath(row: randomPosition, section: .zero)
+        sut.chicos = chicoList
+        
+        // When
+        let selectedChico = sut.getChico(at: indexToTest)
+        
+        // Then
+        XCTAssertNotNil(selectedChico)
+        XCTAssertEqual(selectedChico, chicoList[randomPosition])
+        XCTAssertEqual(selectedChico.name, chicoList[randomPosition].name)
     }
 
 }
