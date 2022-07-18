@@ -18,21 +18,6 @@ extension UIView {
                                  trailing: -constant)
     }
     
-    
-    
-//    func anchor(to superView: UIView) {
-//        superView.addSubview(self)
-//
-//        self.translatesAutoresizingMaskIntoConstraints = false
-//
-//        NSLayoutConstraint.activate([
-//            self.topAnchor.constraint(equalTo: superView.topAnchor),
-//            self.bottomAnchor.constraint(equalTo: superView.bottomAnchor),
-//            self.leadingAnchor.constraint(equalTo: superView.leadingAnchor),
-//            self.trailingAnchor.constraint(equalTo: superView.trailingAnchor)
-//        ])
-//    }
-    
     func anchorWithCustomConstant(to superView: UIView,
                 top: CGFloat = 8,
                 bottom: CGFloat = -8,

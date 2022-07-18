@@ -11,21 +11,25 @@ import XCTest
 @testable import HolaChicos
 
 final class HomeViewModelTests: XCTestCase {
+    
+    // MARK: - Properties
     private let serviceSpy = ServiceAPISpy()
     private let delegateSpy = HomeViewModelDelegateSpy()
+    
     private lazy var sut: HomeViewModel = {
         return HomeViewModel(service: serviceSpy)
     }()
     
-    func test_chicosProperty_shouldInitializeEmpty() {
+    // MARK: - Tests
+    private func test_chicosProperty_shouldInitializeEmpty() {
         XCTAssertEqual(sut.chicos, [])
     }
     
-    func test_fetchChicos_shouldNotCallServiceFetchChicos() {
+    private func test_fetchChicos_shouldNotCallServiceFetchChicos() {
         XCTAssertFalse(serviceSpy.fetchChicosCalled)
     }
     
-    func test_fetchChicos_shouldCallServiceFetchChicos() {
+    private func test_fetchChicos_shouldCallServiceFetchChicos() {
         // When
         sut.fetchChicos()
         
@@ -33,7 +37,7 @@ final class HomeViewModelTests: XCTestCase {
         XCTAssertTrue(serviceSpy.fetchChicosCalled)
     }
     
-    func test_fetchChicos_shouldCallServiceFetchChicosOnce() {
+    private func test_fetchChicos_shouldCallServiceFetchChicosOnce() {
         // When
         sut.fetchChicos()
         
@@ -41,7 +45,7 @@ final class HomeViewModelTests: XCTestCase {
         XCTAssertEqual(serviceSpy.fetchChicosCallCount, 1)
     }
     
-    func test_fetchChicos_shouldCallServiceFetchChicosThirteenTimes() {
+    private func test_fetchChicos_shouldCallServiceFetchChicosThirteenTimes() {
         // When
         for _ in 1...13 {
             sut.fetchChicos()
@@ -50,7 +54,7 @@ final class HomeViewModelTests: XCTestCase {
         XCTAssertEqual(serviceSpy.fetchChicosCallCount, 13)
     }
     
-    func test_fetchChicos_whenResultIsNil_shouldNotCallDelegate() {
+    private func test_fetchChicos_whenResultIsNil_shouldNotCallDelegate() {
         // Given
         sut.delegate = delegateSpy
         serviceSpy.fetchChicosResponse = nil
@@ -62,7 +66,7 @@ final class HomeViewModelTests: XCTestCase {
         XCTAssertFalse(delegateSpy.didFetchDataCalled)
     }
     
-    func test_fetchChicos_whenResultIsValid_shouldCallDelegate() {
+    private func test_fetchChicos_whenResultIsValid_shouldCallDelegate() {
         // Given
         sut.delegate = delegateSpy
         serviceSpy.fetchChicosResponse = nil
@@ -77,7 +81,7 @@ final class HomeViewModelTests: XCTestCase {
         XCTAssertEqual(delegateSpy.didFetchDataResponse?.first?.name, "Chico 13")
     }
     
-    func test_getChico_atFirstPosition() {
+    private func test_getChico_atFirstPosition() {
         // Given
         let chicoList = Chico.fixtureList()
         let firstPosition = 1
@@ -92,7 +96,7 @@ final class HomeViewModelTests: XCTestCase {
         XCTAssertEqual(selectedChico, chicoList[firstPosition])
     }
     
-    func test_getChico_atLastPosition() {
+    private func test_getChico_atLastPosition() {
         // Given
         let chicoList = Chico.fixtureList()
         let lastPosition = chicoList.count - 1
@@ -107,7 +111,7 @@ final class HomeViewModelTests: XCTestCase {
         XCTAssertEqual(selectedChico, chicoList[lastPosition])
     }
     
-    func test_getChico_atRandomPosition() {
+    private func test_getChico_atRandomPosition() {
         // Given
         let chicoList = Chico.fixtureList()
         let randomPosition = Int.random(in: 0..<chicoList.count)

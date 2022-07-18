@@ -100,6 +100,7 @@ extension HomeViewController: UITableViewDelegate {
     }
 }
 
+// MARK: - HomeViewModelDelegate Extension
 extension HomeViewController: HomeViewModelDelegate {
     func didFetch(data: [Chico]) {
         tableView.reloadData()

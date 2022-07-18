@@ -13,7 +13,6 @@ final class MainCoordinator: Coordinator {
     var parentCoordinator: Coordinator?
     var childCoordinators: [Coordinator] = []
     
-    //
     var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
@@ -34,6 +33,7 @@ final class MainCoordinator: Coordinator {
     
     private func makeFirstTab() -> UIViewController {
         let navigationController = UINavigationController()
+        navigationController.navigationBar.isTranslucent = false
         
         let homeFlowCoordinator = HomeFlowCoordinator(navigationController: navigationController)
         homeFlowCoordinator.parentCoordinator = self
@@ -58,8 +58,7 @@ final class MainCoordinator: Coordinator {
         let viewController = GroupTwoViewController()
         
         viewController.coordinator = self
-        viewController.tabBarItem.title = "Grupo ②"
-        viewController.tabBarItem.image = UIImage(systemName: "network")
+        
         
         return viewController
     }
@@ -75,12 +74,23 @@ final class MainCoordinator: Coordinator {
     }
     
     private func makeFifthTab() -> UIViewController {
-        let viewController = MoreOptionsViewController()
+        let navigationController = UINavigationController()
+        navigationController.navigationBar.isTranslucent = false
         
-        viewController.coordinator = self
-        viewController.tabBarItem.title = "Mais"
-        viewController.tabBarItem.image = UIImage(systemName: "ellipsis.circle")
+        let homeFlowCoordinator = MoreOptionsFlowCoordinator(navigationController: navigationController)
+        homeFlowCoordinator.parentCoordinator = self
+        homeFlowCoordinator.start()
         
-        return viewController
+        childCoordinators.append(homeFlowCoordinator)
+        
+        return navigationController
+    }
+    
+    private func makeFifthTabFullScreenPush() {
+        let homeFlowCoordinator = MoreOptionsFlowCoordinator(navigationController: navigationController)
+        homeFlowCoordinator.parentCoordinator = self
+        homeFlowCoordinator.start()
+        
+        childCoordinators.append(homeFlowCoordinator)
     }
 }

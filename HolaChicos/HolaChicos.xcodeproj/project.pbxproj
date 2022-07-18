@@ -12,6 +12,9 @@
 		194330652884B7CD0054D057 /* ServiceAPISpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194330642884B7CD0054D057 /* ServiceAPISpy.swift */; };
 		194330692884BD350054D057 /* HomeViewModelDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194330682884BD350054D057 /* HomeViewModelDelegateSpy.swift */; };
 		1943306B2884BE740054D057 /* Chico+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1943306A2884BE740054D057 /* Chico+Fixture.swift */; };
+		1943306D2885075E0054D057 /* MoreOptionsFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1943306C2885075E0054D057 /* MoreOptionsFlowCoordinator.swift */; };
+		1943306F288508AD0054D057 /* MoreOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1943306E288508AD0054D057 /* MoreOptionsViewModel.swift */; };
+		1943307128850A860054D057 /* MoreOptionsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1943307028850A860054D057 /* MoreOptionsDetailViewController.swift */; };
 		19483474287FF50600DFF40C /* OverlapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19483473287FF50600DFF40C /* OverlapViewController.swift */; };
 		19483476287FF51800DFF40C /* MoreOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19483475287FF51800DFF40C /* MoreOptionsViewController.swift */; };
 		19483478287FF6F100DFF40C /* HomeFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19483477287FF6F100DFF40C /* HomeFlowCoordinator.swift */; };
@@ -66,6 +69,9 @@
 		194330642884B7CD0054D057 /* ServiceAPISpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAPISpy.swift; sourceTree = "<group>"; };
 		194330682884BD350054D057 /* HomeViewModelDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelDelegateSpy.swift; sourceTree = "<group>"; };
 		1943306A2884BE740054D057 /* Chico+Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chico+Fixture.swift"; sourceTree = "<group>"; };
+		1943306C2885075E0054D057 /* MoreOptionsFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreOptionsFlowCoordinator.swift; sourceTree = "<group>"; };
+		1943306E288508AD0054D057 /* MoreOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreOptionsViewModel.swift; sourceTree = "<group>"; };
+		1943307028850A860054D057 /* MoreOptionsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreOptionsDetailViewController.swift; sourceTree = "<group>"; };
 		19483473287FF50600DFF40C /* OverlapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlapViewController.swift; sourceTree = "<group>"; };
 		19483475287FF51800DFF40C /* MoreOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreOptionsViewController.swift; sourceTree = "<group>"; };
 		19483477287FF6F100DFF40C /* HomeFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowCoordinator.swift; sourceTree = "<group>"; };
@@ -200,7 +206,10 @@
 		19AE079F28839C53007BC9B4 /* MoreOptions */ = {
 			isa = PBXGroup;
 			children = (
+				1943306E288508AD0054D057 /* MoreOptionsViewModel.swift */,
 				19483475287FF51800DFF40C /* MoreOptionsViewController.swift */,
+				1943306C2885075E0054D057 /* MoreOptionsFlowCoordinator.swift */,
+				1943307028850A860054D057 /* MoreOptionsDetailViewController.swift */,
 			);
 			path = MoreOptions;
 			sourceTree = "<group>";
@@ -424,11 +433,13 @@
 				19AE07932883381A007BC9B4 /* UIColor+Extension.swift in Sources */,
 				19AE079128833789007BC9B4 /* Chico.swift in Sources */,
 				19AE078F2883377B007BC9B4 /* ChicoTableViewCell.swift in Sources */,
+				1943306F288508AD0054D057 /* MoreOptionsViewModel.swift in Sources */,
 				19FB64C3287E5D61002370A2 /* AppDelegate.swift in Sources */,
 				19FB64F7287E5E37002370A2 /* MainCoordinator.swift in Sources */,
 				19FB64F9287E5E91002370A2 /* MainTabBarController.swift in Sources */,
 				19FB64C5287E5D61002370A2 /* SceneDelegate.swift in Sources */,
 				19AE07A72883B638007BC9B4 /* ChicoDetailViewModel.swift in Sources */,
+				1943306D2885075E0054D057 /* MoreOptionsFlowCoordinator.swift in Sources */,
 				1948347A287FF70700DFF40C /* GroupOneFlowCoordinator.swift in Sources */,
 				19483474287FF50600DFF40C /* OverlapViewController.swift in Sources */,
 				19483478287FF6F100DFF40C /* HomeFlowCoordinator.swift in Sources */,
@@ -436,6 +447,7 @@
 				19AE07972883413D007BC9B4 /* UITableView+Extensions.swift in Sources */,
 				19FB6504287E6CB4002370A2 /* HomeViewController.swift in Sources */,
 				19AE07A52883B5ED007BC9B4 /* ChicoDetailViewController.swift in Sources */,
+				1943307128850A860054D057 /* MoreOptionsDetailViewController.swift in Sources */,
 				1948347C287FF71400DFF40C /* GroupTwoFlowCoordinator.swift in Sources */,
 				19483476287FF51800DFF40C /* MoreOptionsViewController.swift in Sources */,
 				19190D1828832ACB0041E67D /* UIView+Extensions.swift in Sources */,

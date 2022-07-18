@@ -24,7 +24,7 @@ final class HomeFlowCoordinator: Coordinator {
     }
     
     func start() {
-        goToHomeViewController()
+        goTo(.home)
     }
     
     func goTo(_ route: HomeFlow) {

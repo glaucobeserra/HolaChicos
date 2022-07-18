@@ -16,7 +16,7 @@ final class ChicoDetailViewController: BaseViewController {
     // MARK: - Initialization
     init(viewModel: ChicoDetailViewModel) {
         self.viewModel = viewModel
-        
+
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -29,6 +29,7 @@ final class ChicoDetailViewController: BaseViewController {
         super.loadView()
         
         view.backgroundColor = .gray
+        navigationItem.largeTitleDisplayMode = .never
         
         print("💫 ", viewModel.chico.name)
         print("💫 ", viewModel.chico.imageName)
